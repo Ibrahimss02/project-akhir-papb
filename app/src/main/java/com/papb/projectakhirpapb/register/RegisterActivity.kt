@@ -1,11 +1,12 @@
-package com.papb.projectakhirpapb
+package com.papb.projectakhirpapb.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.papb.projectakhirpapb.R
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_register)
     }
 }

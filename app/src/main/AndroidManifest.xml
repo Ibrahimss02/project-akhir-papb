@@ -10,7 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectAkhirPAPB">
         <activity
-            android:name=".MainActivity"
+            android:name=".detailDeveloper.DetailDeveloperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailGame.DetailGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addEntry.AddOrUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

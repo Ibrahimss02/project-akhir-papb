@@ -6,4 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".detailDeveloper.DetailDeveloperActivity">
 
+    <TextView
+        android:id="@+id/tvDevn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="114dp"
+        android:text=" Developer Name"
+        android:textColor="#535050"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTtal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="171dp"
+        android:text="Total Game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDevd" />
+
+    <TextView
+        android:id="@+id/tvDevd"
+        android:layout_width="259dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="76dp"
+        android:text="Description"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDevn" />
+
+    <TextView
+        android:id="@+id/tvAdrs"
+        android:layout_width="125dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="143dp"
+        android:text="Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTtal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".detailGame.DetailGameActivity">
+
+    <ImageView
+        android:id="@+id/imgGame"
+        android:layout_width="337dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvGname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:text="Name"
+        android:textColor="#535050"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgGame" />
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="14dp"
+        android:text="Rating"
+        android:textColor="#535050"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGen" />
+
+    <TextView
+        android:id="@+id/tvDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="11dp"
+        android:text="Developer"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPubl" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="12dp"
+        android:text="Price"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSize" />
+
+    <TextView
+        android:id="@+id/tvGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:text="Genre"
+        android:textColor="#535050"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGname" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="11dp"
+        android:text="Size"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvYear" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="342dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="13dp"
+        android:text="Description"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvPubl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="12dp"
+        android:text="Publisher"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRate" />
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="7dp"
+        android:text="Release Year"
+        android:textColor="#535050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDev" />
+
+    <Button
+        android:id="@+id/btnUpdte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="51dp"
+        android:backgroundTint="#535050"
+        android:text="Update"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

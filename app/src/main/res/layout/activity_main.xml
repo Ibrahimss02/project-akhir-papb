@@ -9,13 +9,47 @@
         tools:context=".home.MainActivity">
 
         <TextView
+            android:id="@+id/tvHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="173dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="173dp"
+            android:text="Home"
+            android:textColor="#535050"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="414dp"
+            android:layout_height="572dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHome" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="83dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="164dp"
+            android:height="20dp"
+            android:backgroundTint="#535050"
+            android:text="Add Data"
+            android:textSize="8sp"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

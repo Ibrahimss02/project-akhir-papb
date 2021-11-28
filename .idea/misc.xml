@@ -4,10 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_add_or_update.xml" value="0.25" />
-        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_detail_developer.xml" value="0.18229166666666666" />
-        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_detail_game.xml" value="0.15245009074410162" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_detail_developer.xml" value="0.25" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_detail_game.xml" value="0.2" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_main.xml" value="0.18229166666666666" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_register.xml" value="0.18229166666666666" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/layout/game_item.xml" value="0.25" />
+        <entry key="..\:/Uni/Sem.-3/PAPB/AndroidStudioProj/ProjectAkhirPAPB/app/src/main/res/menu/menu.xml" value="0.22" />
       </map>
     </option>
   </component>

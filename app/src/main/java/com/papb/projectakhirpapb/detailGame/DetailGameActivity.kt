@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.papb.projectakhirpapb.R
 import com.papb.projectakhirpapb.addEntry.AddOrUpdateActivity
 import com.papb.projectakhirpapb.databinding.ActivityDetailGameBinding
+import com.papb.projectakhirpapb.detailDeveloper.DetailDeveloperActivity
 import com.papb.projectakhirpapb.dto.Game
 
 class DetailGameActivity : AppCompatActivity() {
@@ -38,10 +40,18 @@ class DetailGameActivity : AppCompatActivity() {
             tvPrice.text = String.format("Price: Rp %,d", game.harga)
             tvGameRating.text = game.rating.toString()
 
-            viewModel.developer.observe(this@DetailGameActivity, {
-                Log.i("DetailGame", it.toString())
+            viewModel.developer.observe(this@DetailGameActivity, { dev ->
+                Log.i("DetailGame", dev.toString())
                 if (!game.id_developer.isNullOrEmpty()) {
-                    binding.tvGameDeveloper.text = String.format("Developer: %s", it.nama)
+                    binding.tvGameDeveloper.text = String.format("Developer: %s", dev.nama)
+                    binding.btnCheckDev.apply {
+                        visibility = View.VISIBLE
+                        setOnClickListener {
+                            val intent = Intent(this@DetailGameActivity, DetailDeveloperActivity::class.java)
+                            intent.putExtra(DetailDeveloperActivity.DEVELOPER_OBJECT, dev)
+                            startActivity(intent)
+                        }
+                    }
                 }
             })
         }
@@ -55,5 +65,6 @@ class DetailGameActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+
     }
 }

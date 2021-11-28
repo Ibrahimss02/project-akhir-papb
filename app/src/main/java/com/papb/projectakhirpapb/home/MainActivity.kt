@@ -4,11 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.papb.projectakhirpapb.R
 import com.papb.projectakhirpapb.addEntry.AddOrUpdateActivity
 import com.papb.projectakhirpapb.databinding.ActivityMainBinding
 import com.papb.projectakhirpapb.detailGame.DetailGameActivity
+import com.papb.projectakhirpapb.login.LoginActivity
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +42,14 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        viewModel.onSignedOut.observe(this, {
+            if (it) {
+                Toast.makeText(this, "Signed out", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        })
+
         binding.addButton.setOnClickListener {
             startActivity(Intent(this, AddOrUpdateActivity::class.java))
         }
@@ -45,5 +58,22 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         viewModel.fetchGameFromDb()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.signOut -> viewModel.signOut()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onNavigateUp(): Boolean {
+        finishAndRemoveTask()
+        return super.onNavigateUp()
     }
 }

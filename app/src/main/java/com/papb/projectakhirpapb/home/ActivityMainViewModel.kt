@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.papb.projectakhirpapb.dto.Game
@@ -18,7 +19,12 @@ class ActivityMainViewModel : ViewModel() {
         const val GAME_COLLECTION = "games"
     }
 
+    private val auth = Firebase.auth
     private val firestore = Firebase.firestore
+
+    private val _onSignedout = MutableLiveData(false)
+    val onSignedOut : LiveData<Boolean>
+         get() = _onSignedout
 
     private val _gameList = MutableLiveData<List<Game>>()
     val gameList : LiveData<List<Game>>
@@ -54,5 +60,8 @@ class ActivityMainViewModel : ViewModel() {
         }
     }
 
-
+    fun signOut() {
+        auth.signOut()
+        _onSignedout.value = true
+    }
 }

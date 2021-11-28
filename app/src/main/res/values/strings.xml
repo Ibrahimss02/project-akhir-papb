@@ -13,4 +13,15 @@
     <string name="game_details">Game Details</string>
     <string name="edit">Edit</string>
     <string name="developer_unknown">Developer: Unknown</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="gamedex">GameDex</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="address">Address</string>
+    <string name="developer_name">Developer Name</string>
+    <string name="check_developer">Check Developer</string>
 </resources>

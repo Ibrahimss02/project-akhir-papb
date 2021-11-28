@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="game"
+            type="com.papb.projectakhirpapb.dto.Game" />
+        <variable
+            name="onClickListener"
+            type="com.papb.projectakhirpapb.home.GameItemListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:onClick="@{() -> onClickListener.onClick(game)}"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvJudulGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Judul game"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvGenreGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Genre: Action, RPG"
+                app:layout_constraintTop_toBottomOf="@id/tvJudulGame"
+                app:layout_constraintStart_toStartOf="@id/tvJudulGame"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tvGamePublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rockstar games"
+                app:layout_constraintTop_toBottomOf="@id/tvGenreGame"
+                app:layout_constraintStart_toStartOf="@id/tvGenreGame"
+                android:textStyle="italic"/>
+
+            <ImageView
+                android:id="@+id/ratingImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_baseline_star_24"/>
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="4.5"
+                app:layout_constraintTop_toTopOf="@id/ratingImage"
+                app:layout_constraintBottom_toBottomOf="@id/ratingImage"
+                app:layout_constraintEnd_toStartOf="@id/ratingImage"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tvGameReleaseYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/tvJudulGame"
+                app:layout_constraintEnd_toEndOf="@id/ratingImage"
+                tools:text="2020"
+                android:textStyle="italic"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

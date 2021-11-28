@@ -8,7 +8,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.papb.projectakhirpapb.roomdb.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -27,20 +26,12 @@ class RegisterActivityViewModel(application: Application) : AndroidViewModel(app
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         // Register Success
-                        val user = User(auth.currentUser!!.uid, username)
-                        viewModelScope.launch(Dispatchers.IO) {
-                            addUserToDatabase(user)
-                        }
                     } else {
                         Log.w("Register", task.exception)
                         Toast.makeText(getApplication(), "Register User failed.", Toast.LENGTH_LONG).show()
                     }
                 }
         }
-    }
-
-    private fun addUserToDatabase(user : User) {
-        //TODO(add User to both database)
     }
 
     private fun validateForm(name : String, email : String, password : String, confirmPassword : String) : Boolean {

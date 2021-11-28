@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Project Akhir PAPB</string>
+    <string name="add_or_update_entry">Add or Update Game</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="publisher">Publisher</string>
+    <string name="genre">Genre</string>
+    <string name="release_year">Release Year</string>
+    <string name="rating">Rating (0-5)</string>
+    <string name="price">Price</string>
+    <string name="save">Save</string>
+    <string name="developer">Developer</string>
+    <string name="game_details">Game Details</string>
+    <string name="edit">Edit</string>
+    <string name="developer_unknown">Developer: Unknown</string>
 </resources>

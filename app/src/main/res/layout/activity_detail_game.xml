@@ -1,139 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
-    tools:context=".detailGame.DetailGameActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imgGame"
-        android:layout_width="337dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="37dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".detailGame.DetailGameActivity"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tvGname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="24dp"
-        android:text="Name"
-        android:textColor="#535050"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgGame" />
+        <TextView
+            android:id="@+id/headlineDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvGameTitle"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:text="@string/game_details"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="14dp"
-        android:text="Rating"
-        android:textColor="#535050"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGen" />
+        <TextView
+            android:id="@+id/tvGameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/headlineDetail"
+            app:layout_constraintBottom_toTopOf="@id/tvGameDescription"
+            tools:text="Clash of Clans"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="18dp" />
 
-    <TextView
-        android:id="@+id/tvDev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="11dp"
-        android:text="Developer"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPubl" />
+        <TextView
+            android:id="@+id/tvGameDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Clash of Clans is a social RTS in which players must grow and defend their in-game village by training troops, gathering resources and teaming up with other players"
+            app:layout_constraintTop_toBottomOf="@id/tvGameTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvGameGenre"
+            android:layout_marginTop="8dp" />
 
-    <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="12dp"
-        android:text="Price"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSize" />
+        <TextView
+            android:id="@+id/tvGameGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Genre: Strategy real time"
+            app:layout_constraintBottom_toTopOf="@id/tvGameDeveloper"
+            android:layout_marginTop="12dp"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tvGen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="16dp"
-        android:text="Genre"
-        android:textColor="#535050"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGname" />
+        <TextView
+            android:id="@+id/tvGameDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvGameGenre"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/developer_unknown"
+            app:layout_constraintBottom_toTopOf="@id/tvPublisher"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tvSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="11dp"
-        android:text="Size"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYear" />
+        <TextView
+            android:id="@+id/tvPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDeveloper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvReleaseYear"
+            tools:text="Publisher: Supercell"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tvDesc"
-        android:layout_width="342dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="13dp"
-        android:text="Description"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+        <TextView
+            android:id="@+id/tvReleaseYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPublisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvPrice"
+            tools:text="Release year: 2012"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tvPubl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="12dp"
-        android:text="Publisher"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRate" />
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvReleaseYear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ivGameRating"
+            tools:text="Price : Rp 0"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/tvYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="7dp"
-        android:text="Release Year"
-        android:textColor="#535050"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDev" />
+        <ImageView
+            android:id="@+id/ivGameRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_24"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnEditEntry"
+            android:layout_marginTop="12dp" />
 
-    <Button
-        android:id="@+id/btnUpdte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="51dp"
-        android:backgroundTint="#535050"
-        android:text="Update"
-        app:cornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvGameRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/ivGameRating"
+            app:layout_constraintTop_toTopOf="@id/ivGameRating"
+            app:layout_constraintBottom_toBottomOf="@id/ivGameRating"
+            tools:text="4.2"
+            android:layout_marginEnd="8dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/ivGameRating"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
